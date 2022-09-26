@@ -67,16 +67,22 @@ aqui tem meu definition of done
 
 #### 1 Relacionamento 1:1
 
-DNA x PRoprietário </br>
+##### DNA x Proprietário </br>
 
-#### 2 Relacionamentos :n
+Cada Proptrietário pode ter um DNA e um DNA só pode pertencer a um indivíduo 
 
-DNA x Funcionalidade </br>
-DNA x Fórmula </br>
+#### 2 Relacionamentos n:n
+
+##### DNA x Funcionalidade </br>
+
+Cada DNA pode ter mais de uma funcionalidade e uma funcionalidade pode ser usada para mais de um DNA.
+Isso foi quebrado em dois outros relacionamentos (DNA x USO  e Funcionalidade X USO)
+
+##### DNA x Fórmula </br>
 
 #### 3 Relacionamento 1:n
 
-Teste x DNA </br>
-Teste x Fórmula </br>
-Marca x Fórmula </br>
-Marca X Contato </br>
+##### Teste x DNA </br>
+##### Teste x Fórmula </br>
+##### Marca x Fórmula </br>
+##### Marca X Contato </br>
