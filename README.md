@@ -59,3 +59,24 @@ aqui tem meu definition of done
 ~~~
 
 </br>
+
+
+---
+
+## Relacionamentos
+
+#### 1 Relacionamento 1:1
+
+DNA x PRoprietário
+
+#### 2 Relacionamentos :n
+
+DNA x Funcionalidade
+DNA x Fórmula
+
+#### 3 Relacionamento 1:n
+
+Teste x DNA
+Teste x Fórmula
+Marca x Fórmula 
+Marca X Contato
