@@ -1,0 +1,18 @@
+#Orientações
+---
+
+
+1. Desenvolver 3 User Stoyrs de acordo com o padrão apresentado em https://www.scaledagileframework.com/story/
+    a. Título;
+    b. CA - Critério de Aceitação;
+    c. DoD - Definition of Done.
+    
+    
+2. Diagrama Modelo Relacional (Desenvolver com StarUML)
+    a. 1 relacionamento 1:1;
+    b. 3 relacionamentos 1:n;
+    c. 2 relacionamentos n:n.
+    
+3. Diagrama de Classes de acordo com o Modelo Relacional (Desenvolver com StarUML)
+
+4. Código Python usando Framework SQLAlchemy para o mapeamento objeto-relacional
