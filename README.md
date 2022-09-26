@@ -67,16 +67,16 @@ aqui tem meu definition of done
 
 #### 1 Relacionamento 1:1
 
-DNA x PRoprietário
+DNA x PRoprietário </br>
 
 #### 2 Relacionamentos :n
 
-DNA x Funcionalidade
-DNA x Fórmula
+DNA x Funcionalidade </br>
+DNA x Fórmula </br>
 
 #### 3 Relacionamento 1:n
 
-Teste x DNA
-Teste x Fórmula
-Marca x Fórmula 
-Marca X Contato
+Teste x DNA </br>
+Teste x Fórmula </br>
+Marca x Fórmula </br>
+Marca X Contato </br>
