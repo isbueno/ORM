@@ -69,20 +69,42 @@ aqui tem meu definition of done
 
 ##### DNA x Proprietário </br>
 
-Cada Proptrietário pode ter um DNA e um DNA só pode pertencer a um indivíduo 
+Cada Proptrietário só pode ter um DNA e um DNA só pode pertencer a um indivíduo 
 
 #### 2 Relacionamentos n:n
 
 ##### DNA x Funcionalidade </br>
 
 Cada DNA pode ter mais de uma funcionalidade e uma funcionalidade pode ser usada para mais de um DNA.
-Isso foi quebrado em dois outros relacionamentos (DNA x USO  e Funcionalidade X USO)
+Isso foi quebrado em dois outros relacionamentos de 1:n (DNA x USO e Funcionalidade X USO)
 
 ##### DNA x Fórmula </br>
 
+Um DNA pode ser testado em várias fórmulas e várias fórmulas podem ser testadas em um DNA.
+Isso foi quebrado em dois relacionamentos 1:n (DNA x Teste e Teste x Fórmula)
+
 #### 3 Relacionamento 1:n
 
+##### DNA x USO </br>
+
+Esse relacionamento indica para que o DNA pode ser utilizado, em quais categorias de funcionalidades ele se encaixa para teste.
+
+##### USO x Funcionalidade </br>
+
+Esse relacionamento vai indicar quais DNAs poderão ser usados para uma determinada funcionalidade. 
+
 ##### Teste x DNA </br>
+
+A classe teste vai servir como um intermediário para o relacionamento de 1 DNA ser testado por várias fórmulas.
+
 ##### Teste x Fórmula </br>
+
+Aqui a classe teste tem a função contrária, servir de intermediário para o o relacionamento de 1 Fórmula ser testada por diversos DNAs.
+
 ##### Marca x Fórmula </br>
+
+Uma Marca pode disponibilizar diversas fórmulas para testes.
+
 ##### Marca X Contato </br>
+
+Uma Marca pode ter mais de um tipo de contato cadastrado no Banco de Dados.
