@@ -3,10 +3,16 @@
 **Trabalho de Mapeamento Objeto-Relacional da disciplina de Laboratório de Banco de Dados**
 
 
-Baseado no projeto de TCC Banco de Dados Genético para a substituição de animais em laboratórios
+Baseado no projeto de TCC Banco de Dados Genético para a substituição de animais em laboratórios.
 </br></br>
 
+## Resumo
 
+Muito se discute a respeito dos testes feitos em animais e de toda a crueldade que existe neste processo. Para solucionar este problema são criados meios alternativos para realizar os experimentos. Com isso, o objetivo da criação do  Banco de Dados Genético é substituir os testes feitos em animais nos laboratórios de empresas a fim de testar produtos compatíveis com o corpo humano. Contendo informações sobre a sequência do DNA humano e das fórmulas dos produtos, será possível fazer comparações usando inteligência artificial para descobrir se as reações serão positivas ou negativas. Dessa maneira, os testes não envolvem o uso de animais, resultando na economia de tempo e recursos financeiros que seriam dedicados à cobaia.
+
+
+
+</br></br>
 ## User Story 1
 ### Persona: Químico
 
