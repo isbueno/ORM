@@ -26,7 +26,7 @@ Então será possível cadastrar um DNA.
 
 
 DoD
-aqui tem meu definition of done
+(inserir)
 ~~~
 
 </br>
@@ -44,7 +44,7 @@ Então será possível alterar os atibutos na tabela.
 
 
 DoD
-aqui tem meu definition of done
+(inserir)
 ~~~
 
 </br>
@@ -61,7 +61,7 @@ Quando for possível apresentar uma tabela com os dados de ID, Nome, Sequência 
 Então será possível visualizar a tabela.
 
 DoD
-aqui tem meu definition of done
+(inserir)
 ~~~
 
 </br>
@@ -75,7 +75,7 @@ aqui tem meu definition of done
 
 ##### DNA x Proprietário </br>
 
-Cada Proptrietário só pode ter um DNA e um DNA só pode pertencer a um indivíduo 
+Cada Proptrietário só pode ter um DNA e um DNA só pode pertencer a um indivíduo. 
 
 
 </br></br>
@@ -83,13 +83,13 @@ Cada Proptrietário só pode ter um DNA e um DNA só pode pertencer a um indiví
 
 ##### DNA x Funcionalidade </br>
 
-Cada DNA pode ter mais de uma funcionalidade e uma funcionalidade pode ser usada para mais de um DNA.
+Cada DNA pode ter mais de uma funcionalidade e uma funcionalidade pode ser agregada para mais de um DNA.
 Isso foi quebrado em dois outros relacionamentos de 1:n (DNA x USO e Funcionalidade X USO)
 
 ##### DNA x Fórmula </br>
 
 Um DNA pode ser testado em várias fórmulas e várias fórmulas podem ser testadas em um DNA.
-Isso foi quebrado em dois relacionamentos 1:n (DNA x Teste e Teste x Fórmula)
+Isso foi quebrado em dois relacionamentos de 1:n (DNA x Teste e Teste x Fórmula)
 
 
 </br></br>
@@ -97,7 +97,7 @@ Isso foi quebrado em dois relacionamentos 1:n (DNA x Teste e Teste x Fórmula)
 
 ##### DNA x USO </br>
 
-Esse relacionamento indica para que o DNA pode ser utilizado, em quais categorias de funcionalidades ele se encaixa para teste.
+Esse relacionamento indica quais categorias (funcionalidades) serão agregadas para o DNA.
 
 ##### USO x Funcionalidade </br>
 
@@ -109,12 +109,12 @@ A classe teste vai servir como um intermediário para o relacionamento de 1 DNA 
 
 ##### Teste x Fórmula </br>
 
-Aqui a classe teste tem a função contrária, servir de intermediário para o o relacionamento de 1 Fórmula ser testada por diversos DNAs.
+Aqui a classe teste tem a função contrária, servir de intermediário para o relacionamento em que 1 Fórmula é testada por diversos DNAs.
 
 ##### Marca x Fórmula </br>
 
-Uma Marca pode disponibilizar diversas fórmulas para testes.
+Uma Marca pode disponibilizar diversas fórmulas para testes, enquanto uma fórmula só pertence a uma Marca.
 
 ##### Marca X Contato </br>
 
-Uma Marca pode ter mais de um tipo de contato cadastrado no Banco de Dados.
+Uma Marca pode ter mais de um tipo de contato cadastrado no Banco de Dados, enquanto um contato só pode pertencer a uma Marca.
