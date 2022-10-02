@@ -13,6 +13,8 @@ class Individuo(Base):
     __tablename__ = "Individuo"
     id_individuo = Column(Integer, primary_key=True)
     nomeIndividuo = Column(String(150), nullable=False)
+    idadeIndividuo = Column(Integer, nullable=False)
+    sexoIndividuo = Column(String(1), nullable=False)
     dnaR = relationship("DNA", back_populates="Individuo")
 
 
@@ -33,18 +35,22 @@ Session = sessionmaker(engine, expire_on_commit=False)
 
 def addDna():
     with Session.begin() as session:
-        print("Individuo----------")
-        print("Nome: ")
-        individuo = Individuo()
-        individuo.nomeIndividuo = input()
-        id_individuo = individuo.id_individuo
-
         print("DNA-------------")
         print("Nome: ")
         dna = DNA()
         dna.nomeDna = input()
+        print("\nSEQUENCIA: ")
         dna.sequenciaDna = input()
         id_dna = dna.id_dna
+
+        print("Individuo----------")
+        individuo = Individuo()
+        print("Nome: ")
+        individuo.nomeIndividuo = input()
+        print("Idade: ")
+        individuo.idadeIndividuo = input()
+        print("Sexo: ")
+        individuo.sexoIndividuo = input()
 
         session.add(individuo)
         session.flush()
