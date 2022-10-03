@@ -18,14 +18,14 @@ Muito se discute a respeito dos testes feitos em animais e de toda a crueldade q
 
 "Eu como Químico responsável pelos testes, preciso de uma funcionalidade de cadastrar novos DNAs porque desejo inserir dados na minha tabela."
 
-~~~
-CA
+
+### CA
 Entregar sistema com função de inserir
 Quando for possível cadastrar um novo DNA junto de ID, Nome, Sequência Genética, Proprietário.
 Então será possível cadastrar um DNA.
 
 
-DoD
+### DoD
 
 ![image](https://user-images.githubusercontent.com/102770607/193482184-e067002a-13ae-4652-9e5d-bef150510843.png)
 Figura 1 - Menu de Operações para Adição dos dados
@@ -33,7 +33,7 @@ Figura 1 - Menu de Operações para Adição dos dados
 ![image](https://user-images.githubusercontent.com/102770607/193482204-9ee92566-9f89-45d7-975e-be05430aac4a.png)
 Figura 2 - Dados do "individuo 3" inseridos na tabela.
 
-~~~
+
 
 </br>
 
@@ -42,14 +42,14 @@ Figura 2 - Dados do "individuo 3" inseridos na tabela.
 
 "Eu como Químico responsável pelos testes, preciso de uma funcionalidade de alterar atributos do DNAs porque podem ocorrer erros na inclusão."
 
-~~~
-CA
+
+### CA
 Entregar o sistema com a função de alterar dados
 Quando for possível mudar qualquer um dos seus atributos em determinado DNA,
 Então será possível alterar os atibutos na tabela. 
 
 
-DoD
+### DoD
 - Os dados de teste puderam ser alterados como é possível ver nas seguintes imagens: 
 
 ![image](https://user-images.githubusercontent.com/102770607/193481889-a6a847eb-eaa6-45fc-98f4-5c3612a23f07.png)
@@ -61,7 +61,7 @@ Figura 4 - Menu de Operações para alteração dos dados
 
 ![image](https://user-images.githubusercontent.com/102770607/193481935-7bf53ff9-cf67-485e-bc17-94b8e8b2974e.png)
 Figura 5 - Linha 2 "ATCAGTCATTACTACCTCTCTAGCT" foi alterado para "TTTTAAAAGGGGCCCC".
-~~~
+
 
 </br>
 
@@ -70,13 +70,13 @@ Figura 5 - Linha 2 "ATCAGTCATTACTACCTCTCTAGCT" foi alterado para "TTTTAAAAGGGGCC
 
 "Eu como Químico responsável pelos testes, preciso de uma funcionalidade de visualizar uma tabela específica de DNA para que facilite meu gerenciamento e testes."
 
-~~~
-CA
+
+### CA
 Entregar a funcionaliadde de exibir tabela do DNA
 Quando for possível apresentar uma tabela com os dados de ID, Nome, Sequência Genética, Proprietário.
 Então será possível visualizar a tabela.
 
-DoD
+### DoD
 - A tarefa pôde ser concluida como mostram as imagens abaixo:
 
 ![image](https://user-images.githubusercontent.com/102770607/193482006-33b079d7-d052-4076-8742-b76f843daad3.png)
@@ -85,7 +85,6 @@ Figura 6 - Menu de Operações para visualização dos dados e resultado da visu
 ![image](https://user-images.githubusercontent.com/102770607/193482114-4cfea966-880c-4d8e-a387-92ef2908b6e9.png)
 Figura 7 - Visualização pelo terminal PowerShell para comparação.
 
-~~~
 
 </br></br>
 
