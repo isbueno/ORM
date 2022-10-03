@@ -28,10 +28,10 @@ Então será possível cadastrar um DNA.
 ### DoD
 
 ![image](https://user-images.githubusercontent.com/102770607/193482184-e067002a-13ae-4652-9e5d-bef150510843.png)
-Figura 1 - Menu de Operações para Adição dos dados
+</br>Figura 1 - Menu de Operações para Adição dos dados
 
 ![image](https://user-images.githubusercontent.com/102770607/193482204-9ee92566-9f89-45d7-975e-be05430aac4a.png)
-Figura 2 - Dados do "individuo 3" inseridos na tabela.
+</br>Figura 2 - Dados do "individuo 3" inseridos na tabela.
 
 
 
@@ -53,14 +53,14 @@ Então será possível alterar os atibutos na tabela.
 - Os dados de teste puderam ser alterados como é possível ver nas seguintes imagens: 
 
 ![image](https://user-images.githubusercontent.com/102770607/193481889-a6a847eb-eaa6-45fc-98f4-5c3612a23f07.png)
-Figura 3 - Dados inseridos na tabela.
+</br>Figura 3 - Dados inseridos na tabela.
 
 ![image](https://user-images.githubusercontent.com/102770607/193481956-9ad19224-4d37-4681-9afb-114c8d07b19a.png)
-Figura 4 - Menu de Operações para alteração dos dados
+</br>Figura 4 - Menu de Operações para alteração dos dados
 
 
 ![image](https://user-images.githubusercontent.com/102770607/193481935-7bf53ff9-cf67-485e-bc17-94b8e8b2974e.png)
-Figura 5 - Linha 2 "ATCAGTCATTACTACCTCTCTAGCT" foi alterado para "TTTTAAAAGGGGCCCC".
+</br>Figura 5 - Linha 2 "ATCAGTCATTACTACCTCTCTAGCT" foi alterado para "TTTTAAAAGGGGCCCC".
 
 
 </br>
@@ -80,10 +80,10 @@ Então será possível visualizar a tabela.
 - A tarefa pôde ser concluida como mostram as imagens abaixo:
 
 ![image](https://user-images.githubusercontent.com/102770607/193482006-33b079d7-d052-4076-8742-b76f843daad3.png)
-Figura 6 - Menu de Operações para visualização dos dados e resultado da visualização.
+</br>Figura 6 - Menu de Operações para visualização dos dados e resultado da visualização.
 
 ![image](https://user-images.githubusercontent.com/102770607/193482114-4cfea966-880c-4d8e-a387-92ef2908b6e9.png)
-Figura 7 - Visualização pelo terminal PowerShell para comparação.
+</br></br>Figura 7 - Visualização pelo terminal PowerShell para comparação.
 
 
 </br></br>
@@ -153,8 +153,8 @@ Segue abaixo os Diagramas utilizados para a sua construção. Apesar de estarem 
 
 ![image](https://user-images.githubusercontent.com/102770607/193482961-d2e04659-88e6-45ce-b85e-515e5396d6e1.png)
 
-Figura 8 - Modelo Relacional.
+</br>Figura 8 - Modelo Relacional.
 
 ![image](https://user-images.githubusercontent.com/102770607/193482925-c3f09ef8-e5ae-4614-862c-3bc90b5bed07.png)
 
-Figura 9 - Diagrama de Classe.
+</br>Figura 9 - Diagrama de Classe.
