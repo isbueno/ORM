@@ -53,14 +53,14 @@ DoD
 - Os dados de teste puderam ser alterados como é possível ver nas seguintes imagens: 
 
 ![image](https://user-images.githubusercontent.com/102770607/193481889-a6a847eb-eaa6-45fc-98f4-5c3612a23f07.png)
-Figura 1 - Dados inseridos na tabela.
+Figura 3 - Dados inseridos na tabela.
 
 ![image](https://user-images.githubusercontent.com/102770607/193481956-9ad19224-4d37-4681-9afb-114c8d07b19a.png)
-Figura 2 - Menu de Operações para alteração dos dados
+Figura 4 - Menu de Operações para alteração dos dados
 
 
 ![image](https://user-images.githubusercontent.com/102770607/193481935-7bf53ff9-cf67-485e-bc17-94b8e8b2974e.png)
-Figura 3 - Linha 2 "ATCAGTCATTACTACCTCTCTAGCT" foi alterado para "TTTTAAAAGGGGCCCC".
+Figura 5 - Linha 2 "ATCAGTCATTACTACCTCTCTAGCT" foi alterado para "TTTTAAAAGGGGCCCC".
 ~~~
 
 </br>
@@ -80,10 +80,10 @@ DoD
 - A tarefa pôde ser concluida como mostram as imagens abaixo:
 
 ![image](https://user-images.githubusercontent.com/102770607/193482006-33b079d7-d052-4076-8742-b76f843daad3.png)
-Figura 4 - Menu de Operações para visualização dos dados e resultado da visualização.
+Figura 6 - Menu de Operações para visualização dos dados e resultado da visualização.
 
 ![image](https://user-images.githubusercontent.com/102770607/193482114-4cfea966-880c-4d8e-a387-92ef2908b6e9.png)
-Figura 5 - Visualização pelo terminal PowerShell para comparação.
+Figura 7 - Visualização pelo terminal PowerShell para comparação.
 
 ~~~
 
@@ -141,3 +141,21 @@ Uma Marca pode disponibilizar diversas fórmulas para testes, enquanto uma fórm
 ##### Marca X Contato </br>
 
 Uma Marca pode ter mais de um tipo de contato cadastrado no Banco de Dados, enquanto um contato só pode pertencer a uma Marca.
+
+
+----
+
+
+O código das três funcionalidades propostas nas User Storys pode ser conferido em "ORM.py"
+
+Segue abaixo os Diagramas utilizados para a sua construção. Apesar de estarem mais completos do que o código, ele representa a relação principal proposta nesse diretório: a construção da relação INDIVÍDUO X DNA e suas funcionalidades (Alterar Sequencia Genética, Visualizar DNA e Inserir DNA).
+
+
+
+![image](https://user-images.githubusercontent.com/102770607/193482961-d2e04659-88e6-45ce-b85e-515e5396d6e1.png)
+
+Figura 8 - Modelo Relacional.
+
+![image](https://user-images.githubusercontent.com/102770607/193482925-c3f09ef8-e5ae-4614-862c-3bc90b5bed07.png)
+
+Figura 9 - Diagrama de Classe.
