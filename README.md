@@ -151,10 +151,13 @@ Segue abaixo os Diagramas utilizados para a sua construção. Apesar de estarem 
 
 
 
-![image](https://user-images.githubusercontent.com/102770607/193482961-d2e04659-88e6-45ce-b85e-515e5396d6e1.png)
+![image](https://user-images.githubusercontent.com/102770607/193710959-0cc3c27d-1e55-4fcb-a900-f5d7e3deb4c6.png)
+
 
 </br>Figura 8 - Modelo Relacional.
 
-![image](https://user-images.githubusercontent.com/102770607/193482925-c3f09ef8-e5ae-4614-862c-3bc90b5bed07.png)
+
+![image](https://user-images.githubusercontent.com/102770607/193711004-cd20ac02-e4a8-4314-ad52-be496d3d7099.png)
+
 
 </br>Figura 9 - Diagrama de Classe.
