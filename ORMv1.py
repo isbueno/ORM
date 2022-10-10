@@ -15,7 +15,6 @@ class Individuo(Base):
     nomeIndividuo = Column(String(150), nullable=False)
     idadeIndividuo = Column(Integer, nullable=False)
     sexoIndividuo = Column(String(1), nullable=False)
-    dnaR = relationship("DNA", back_populates="Individuo")
 
 
 class DNA(Base):

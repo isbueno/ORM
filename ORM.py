@@ -2,11 +2,25 @@ from sqlalchemy import create_engine, Column, Integer, String, ForeignKey, updat
 from sqlalchemy.orm import declarative_base, sessionmaker, relationship
 from sqlalchemy.sql.expression import bindparam
 
-URL = "mysql+mysqlconnector://root:password@localhost:3306/DBG"
+URL = "mysql+mysqlconnector://aluno:aluno123@localhost:3306/DBG"
 
 # $ cd C:\Program Files\MySQL\MySQL Server 8.0\bin
 
 Base = declarative_base()
+
+
+class DNA(Base):
+    __tablename__ = "DNA"
+    id_dna = Column(Integer, primary_key=True)
+    nomeDna = Column(String(150), nullable=False)
+    sequenciaDna = Column(String(100), nullable=False)
+
+    id_individuo = relationship(Integer, ForeignKey("Individuo.id_individuo"))
+
+    def __str__(self):
+        return "DNA-----------------------\nid_dna: {} \nnome: {} \nsequencia: {})".format(
+            self.id_dna, self.nomeDna, self.sequenciaDna
+        )
 
 
 class Individuo(Base):
@@ -15,85 +29,62 @@ class Individuo(Base):
     nomeIndividuo = Column(String(150), nullable=False)
     idadeIndividuo = Column(Integer, nullable=False)
     sexoIndividuo = Column(String(1), nullable=False)
-    dnaR = relationship("DNA", back_populates="Individuo")
+
+    contatos = relationship("Contato", backref="individuo")
+
+    def __str__(self):
+        return "Indivíduo(id_individuo = {}, nome = {}, idade = {}, sexo = {})".format(
+            self.id_individuo, self.nome, self.idadeIndividuo, self.sexoIndividuo)
 
 
-class DNA(Base):
-    __tablename__ = "DNA"
-    id_dna = Column(Integer, primary_key=True)
-    nomeDna = Column(String(150), nullable=False)
-    sequenciaDna = Column(String(100), nullable=False)
+class Contato(Base):
+    __tablename__ = "Contato"
+    id_contato = Column(Integer, primary_key=True)
+    email = Column(String(30), nullable=False)
+    numero = Column(String(20))
+
     id_individuo = Column(Integer, ForeignKey("Individuo.id_individuo"))
-    # many-to-one scalar
-    Individuo = relationship("Individuo", back_populates="dnaR")
 
-
-engine = create_engine(url=URL)
-Base.metadata.create_all(bind=engine)
-Session = sessionmaker(engine, expire_on_commit=False)
-
-
-def addDna():
-    with Session.begin() as session:
-        print("DNA-------------")
-        print("Nome: ")
-        dna = DNA()
-        dna.nomeDna = input()
-        print("\nSEQUENCIA: ")
-        dna.sequenciaDna = input()
-        id_dna = dna.id_dna
-
-        print("Individuo----------")
-        individuo = Individuo()
-        print("Nome: ")
-        individuo.nomeIndividuo = input()
-        print("Idade: ")
-        individuo.idadeIndividuo = input()
-        print("Sexo: ")
-        individuo.sexoIndividuo = input()
-
-        session.add(individuo)
-        session.flush()
-        session.add(dna)
-
-
-def editDna():
-    ATUAL = input("ATUAL: ")
-    NOVO = input("NOVO: ")
-    with engine.connect() as connection:
-        connection.execute("UPDATE DNA SET sequenciaDna=\"" + NOVO + "\" WHERE nomeDna= \"" + ATUAL + "\"")
-        print("Dados Atualizados com sucesso!")
-
-
-def viewDna():
-    nomeProcura = input("NOME: ")
-    with engine.connect() as connection:
-        result_set = connection.execute(" SELECT nomeDNA, sequenciaDna FROM DNA WHERE nomeDna=\""+ nomeProcura + "\"")
-        print("-------------------------")
-        for row in result_set:
-            print("NOME: " + row[0] +"\nSEQUÊNCIA: " + row[1])
-
-
-def menu():
-
-    print("1 -  INSERIR DNA\n"
-          "2 -  EDITAR DNA\n"
-          "3 -  VISUALIZAR DNA\n\n")
-    opcao = input("Selecione a opção desejada:")
-
-    match opcao:
-        case "1":
-            addDna()
-
-        case "2":
-            editDna()
-
-        case "3":
-            viewDna()
+    def __str__(self):
+        return "Contato(id_contato = {}, email = {}, numero = {})".format(
+            self.id_contato, self.email, self.numero
+        )
 
 
 def main():
-    menu()
+    engine = create_engine(url=URL)
+    Base.metadata.drop_all(bind=engine)
+    Base.metadata.create_all(bind=engine)
+
+    Session = sessionmaker(engine, expire_on_commit=False)
+
+    with Session.begin() as session:
+        individuo = Individuo(nomeIndividuo="Isabely", idadeIndividuo="19", sexoIndividuo="F")
+
+#        for i in range(10):
+        individuo.contatos.append(
+        Contato(email="23.isabelybueno@gmail.com", numero="+551299999999"))
+
+        session.add(individuo)
+
+    with Session.begin() as session:
+
+        print("============================================")
+
+        individuo = session.query(Individuo).get(1)
+
+        print(individuo)
+
+        for contato in individuo.contatos:
+            print("   * " + str(contato))
+
+    with Session.begin() as session:
+
+        print("\n============================================")
+
+        contato = session.query(Contato).get(5)
+
+        print(contato)
 
 
 if __name__ == "__main__":
