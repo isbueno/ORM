@@ -2,7 +2,7 @@ from sqlalchemy import create_engine, Column, Integer, String, ForeignKey, updat
 from sqlalchemy.orm import declarative_base, sessionmaker, relationship
 from sqlalchemy.sql.expression import bindparam
 
-URL = "mysql+mysqlconnector://root:polimataIFSP.email23@localhost:3306/DBG"
+URL = "mysql+mysqlconnector://root:password@localhost:3306/DBG"
 
 # $ cd C:\Program Files\MySQL\MySQL Server 8.0\bin
 
