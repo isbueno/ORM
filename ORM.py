@@ -2,7 +2,7 @@ from sqlalchemy import create_engine, Column, Integer, String, ForeignKey, updat
 from sqlalchemy.orm import declarative_base, sessionmaker, relationship
 from sqlalchemy.sql.expression import bindparam
 
-URL = "mysql+mysqlconnector://aluno:aluno123@localhost:3306/DBG"
+URL = "mysql+mysqlconnector://root:polimataIFSP.email23@localhost:3306/DBG"
 
 # $ cd C:\Program Files\MySQL\MySQL Server 8.0\bin
 
@@ -15,7 +15,7 @@ class DNA(Base):
     nomeDna = Column(String(150), nullable=False)
     sequenciaDna = Column(String(100), nullable=False)
 
-    id_individuo = relationship(Integer, ForeignKey("Individuo.id_individuo"))
+    id_individuo = Column(Integer, ForeignKey("Individuo.id_individuo"))
 
     def __str__(self):
         return "DNA-----------------------\nid_dna: {} \nnome: {} \nsequencia: {})".format(
@@ -34,7 +34,7 @@ class Individuo(Base):
 
     def __str__(self):
         return "Indivíduo(id_individuo = {}, nome = {}, idade = {}, sexo = {})".format(
-            self.id_individuo, self.nome, self.idadeIndividuo, self.sexoIndividuo)
+            self.id_individuo, self.nomeIndividuo, self.idadeIndividuo, self.sexoIndividuo)
 
 
 class Contato(Base):
@@ -61,14 +61,13 @@ def main():
     with Session.begin() as session:
         individuo = Individuo(nomeIndividuo="Isabely", idadeIndividuo="19", sexoIndividuo="F")
 
-#        for i in range(10):
+        #        for i in range(10):
         individuo.contatos.append(
-        Contato(email="23.isabelybueno@gmail.com", numero="+551299999999"))
+            Contato(email="23.isabelybueno@gmail.com", numero="+551299999999"))
 
         session.add(individuo)
 
     with Session.begin() as session:
-
         print("============================================")
 
         individuo = session.query(Individuo).get(1)
@@ -79,7 +78,6 @@ def main():
             print("   * " + str(contato))
 
     with Session.begin() as session:
-
         print("\n============================================")
 
         contato = session.query(Contato).get(5)
